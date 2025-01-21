@@ -1,0 +1,98 @@
+/* General Contact Section Styling */
+#contact {
+    padding: 4rem 1rem;
+    background-color: #121212;
+    color: #dcdcdc;
+    text-align: center;
+}
+
+/* Contact Section Heading */
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff6f61;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Contact Form Styling */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Input and Textarea Styling */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ff6f61;
+    /* Border color matching the theme */
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    /* Dark background for inputs */
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Input and Textarea Focus Effect */
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #1e40af;
+    /* Focus border color */
+    background-color: #2a2a2a;
+    /* Darker background on focus */
+    outline: none;
+}
+
+/* Submit Button Styling */
+#contact button {
+    padding: 1rem 2rem;
+    background: linear-gradient(189deg, rgba(255, 111, 97, 0.8), rgba(18, 18, 18, 0.8));
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+#contact button:hover {
+    background-color: #e55e50;
+    transform: translateY(-5px);
+    /* Slight upward shift on hover */
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+        /* Smaller heading size for mobile */
+    }
+
+    #contact form {
+        max-width: 100%;
+        /* Full width for small screens */
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 90%;
+        /* Adjust input width for smaller screens */
+    }
+
+    #contact button {
+        width: 90%;
+        /* Adjust button width for smaller screens */
+    }
+}
