@@ -200,6 +200,11 @@
     .hero-image img {
         width: 300px;
     }
+
+    .hero-image::before {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -227,6 +232,11 @@
     .hero-image img {
         width: 250px;
     }
+
+    .hero-image::before {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -245,5 +255,10 @@
 
     .hero-image img {
         width: 200px;
+    }
+
+    .hero-image::before {
+        width: 200px;
+        height: 200px;
     }
 }
