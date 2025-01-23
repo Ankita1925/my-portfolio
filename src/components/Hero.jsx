@@ -15,14 +15,17 @@ function Hero() {
 
         typingInterval.current = setInterval(() => {
             setText((prevText) => {
-                // Add the next character to the text being typed out
-                return prevText + fullText[indexRef.current];
+                if (indexRef.current < fullText.length) {
+                    // Add the next character to the text being typed out
+                    return prevText + fullText[indexRef.current];
+                }
+                return prevText; // Do nothing if the index exceeds the text length
             });
 
             indexRef.current += 1;
 
-            if (indexRef.current === fullText.length) {
-                clearInterval(typingInterval.current);  // Clear the interval when text is fully typed
+            if (indexRef.current >= fullText.length) {
+                clearInterval(typingInterval.current); // Clear the interval when text is fully typed
             }
         }, 100); // Speed of typing effect (100ms per character)
 
@@ -31,6 +34,7 @@ function Hero() {
             clearInterval(typingInterval.current);
         };
     }, []); // Empty dependency array ensures this runs only once on mount
+    // Empty dependency array ensures this runs only once on mount
 
     return (
         <section id="hero">
