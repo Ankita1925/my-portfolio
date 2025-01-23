@@ -261,4 +261,27 @@
         width: 200px;
         height: 200px;
     }
+
+    .hero-text h3 {
+        font-size: 1.2rem;
+        /* Adjust font size for smaller screens */
+        white-space: normal;
+        /* Allow text to wrap onto the next line */
+        word-wrap: break-word;
+        /* Ensure long words are broken properly */
+        width: auto;
+        /* Let the width adjust naturally */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 90%;
+            /* Typing animation now expands to full width */
+        }
+    }
+
 }
